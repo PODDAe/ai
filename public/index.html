@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DTZ NOVA AI BOT - Cyber Console</title>
+    <link rel="stylesheet" href="/style.css"> 
+</head>
+<body>
+    <header>
+        <h1>🤖 DTZ NOVA AI BOT - Cyber Console</h1>
+    </header>
+
+    <main id="chat-wrapper">
+        <div id="chat-container">
+            <div class="message bot initial-message">
+                <p><strong>DTZ NOVA AI BOT:</strong> // Initializing sequence... Welcome, **Dulina Nethmira**. I am ready for **CODE GENERATION**, **FILE ANALYSIS**, and **IMAGE GENERATION**.</p>
+                <p>Use: <br>
+                - Standard text for code help.<br>
+                - <code>/generate image [your prompt]</code> for visuals.<br>
+                - The UPLOAD FORM below for file analysis.
+                </p>
+            </div>
+        </div>
+
+        <div id="input-area">
+            
+            <form id="chat-form" class="chat-form">
+                <input 
+                    type="text" 
+                    id="user-prompt" 
+                    placeholder="Ask for code, or /generate image [prompt]..." 
+                    required 
+                    class="chat-input"
+                >
+                <button type="submit">Execute Command</button>
+            </form>
+
+            <form id="upload-form" class="upload-form" enctype="multipart/form-data">
+                <input type="file" name="file" id="file-upload" required>
+                <label for="file-upload" class="file-label">
+                    <span id="file-name-display">SELECT FILE FOR ANALYSIS</span>
+                </label>
+                <button type="submit">Analyze File</button>
+            </form>
+
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 DTZ NOVA AI BOT</p>
+    </footer>
+
+    <script src="/script.js"></script>
+    
+    <script>
+        // CLIENT-SIDE JAVASCRIPT (Used here to update the file name display)
+        document.getElementById('file-upload').addEventListener('change', function() {
+            const fileNameDisplay = document.getElementById('file-name-display');
+            if (this.files.length > 0) {
+                fileNameDisplay.textContent = `FILE LOADED: ${this.files[0].name}`;
+            } else {
+                fileNameDisplay.textContent = 'SELECT FILE FOR ANALYSIS';
+            }
+        });
+    </script>
+</body>
+</html>

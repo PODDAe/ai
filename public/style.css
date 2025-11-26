@@ -1,0 +1,170 @@
+/* DTZ NOVA AI BOT - CYBER RED THEME */
+
+/* --- Variables & Global Styles --- */
+:root {
+    --primary-red: #FF004D; /* Neon/Cyber Pink-Red */
+    --primary-glow: rgba(255, 0, 77, 0.6); /* Red glow effect */
+    --secondary-bg: #0A0A0A; /* Deep Black background */
+    --text-color: #00FFC0; /* Teal/Aqua color for standard text (Digital feel) */
+    --monospaced-font: 'Consolas', 'Monaco', monospace; 
+}
+
+/* Background/Main Body */
+body {
+    background-color: var(--secondary-bg); 
+    color: var(--text-color); 
+    font-family: var(--monospaced-font);
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Header - DTZ NOVA Title */
+header h1 {
+    color: var(--primary-red);
+    text-shadow: 0 0 10px var(--primary-glow);
+    border-bottom: 2px dashed var(--primary-red);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* --- Chat Container & Messages --- */
+
+#chat-wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#chat-container {
+    height: 60vh;
+    overflow-y: auto;
+    border: 1px solid var(--primary-red);
+    padding: 15px;
+    margin-bottom: 20px;
+    background-color: #111;
+}
+
+.message {
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 2px;
+}
+
+/* Bot Messages (DTZ NOVA AI BOT) */
+.message.bot {
+    background-color: rgba(255, 0, 77, 0.08);
+    border-left: 3px solid var(--primary-red);
+    box-shadow: 0 0 8px var(--primary-glow);
+}
+.message.bot strong {
+    color: var(--primary-red);
+}
+
+
+/* User Messages (Dulina Nethmira) */
+.message.user {
+    background-color: #1a1a1a;
+    border-right: 3px solid var(--text-color);
+    text-align: right;
+}
+.message.user strong {
+    color: var(--text-color);
+}
+
+
+/* --- Input Area & Forms --- */
+
+#input-area {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.chat-input, .file-label {
+    background-color: #000000;
+    border: 1px solid var(--primary-red);
+    color: var(--text-color);
+    padding: 12px;
+    font-family: var(--monospaced-font);
+    font-size: 1em;
+    flex-grow: 1;
+}
+
+.chat-form {
+    display: flex;
+    gap: 10px;
+}
+
+/* Buttons (Cyber-Red Look) */
+button {
+    background-color: var(--primary-red);
+    color: var(--secondary-bg);
+    border: 2px solid var(--primary-red);
+    font-weight: bold;
+    cursor: pointer;
+    padding: 10px 20px;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 0 15px var(--primary-glow);
+    text-transform: uppercase;
+}
+
+button:hover {
+    background-color: var(--secondary-bg);
+    color: var(--primary-red);
+    box-shadow: 0 0 20px var(--primary-red);
+}
+
+/* File Upload Specific Styling */
+input[type="file"] {
+    display: none;
+}
+
+.upload-form {
+    display: flex;
+    gap: 10px;
+}
+
+.file-label {
+    display: block;
+    text-align: center;
+    cursor: pointer;
+    background-color: #1a1a1a;
+}
+
+/* --- Code Blocks (Key to programming help) --- */
+
+pre, code {
+    background-color: #000000;
+    border: 1px dashed var(--text-color);
+    padding: 15px;
+    overflow-x: auto;
+    color: #4CAF50; /* Hacker Green for code */
+    font-family: var(--monospaced-font);
+    margin-top: 10px;
+    display: block;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+code {
+    display: inline;
+    padding: 2px 4px;
+    border: none;
+}
+
+/* Image Display for Image Generation */
+.message.bot img {
+    max-width: 100%;
+    height: auto;
+    border: 3px solid var(--primary-red);
+    box-shadow: 0 0 15px var(--primary-glow);
+    margin-top: 10px;
+}
+
+footer {
+    text-align: center;
+    color: #444;
+    margin-top: 30px;
+    padding-top: 10px;
+    border-top: 1px dotted var(--primary-red);
+}

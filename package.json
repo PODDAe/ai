@@ -7,9 +7,9 @@
     "start": "node server.js"
   },
   "dependencies": {
-  "express": "^4.18.2",
-  "multer": "^1.4.5-lts.1",
-  "@google/genai": "^0.14.0", // <-- UPDATE THIS LINE! (Use the latest version found on npmjs.com)
-  "dotenv": "^16.4.5"
-}
+    "express": "^4.18.2",
+    "multer": "^1.4.5-lts.1",
+    "@google/genai": "^0.14.0",
+    "dotenv": "^16.4.5"
+  }
 }
